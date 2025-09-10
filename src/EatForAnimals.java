@@ -9,9 +9,9 @@ public class EatForAnimals {
         int dogNum = scan.nextInt();
 
         System.out.println("How gram of feed to eat your cat? > ");
-        int FeedForOneCat = scan.nextInt();
+        int feedForOneCat = scan.nextInt();
         System.out.println("How gram of feed to eat your dog? > ");
-        int FeedForOneDog = scan.nextInt();
+        int feedForOneDog = scan.nextInt();
 
         System.out.println("How many coast the feed for cat? > ");
         double coastFeedForCat = scan.nextDouble();
@@ -22,33 +22,35 @@ public class EatForAnimals {
         int discountFeedForCat = scan.nextInt();
         System.out.println("How discount for feed for dog? > ");
         int discountFeedForDog = scan.nextInt();
-
-        double allSumm = DaysMoneyInShelter(catNum,FeedForOneCat,coastFeedForCat,discountFeedForCat)+
-                DaysMoneyInShelter(dogNum,FeedForOneDog,coastFeedForDog,discountFeedForDog);
+        int forWeek = 7;
+        int forMonth = 31;
+        int forYear = 365;
+        double allSumm = DaysMoneyInShelter(catNum,feedForOneCat,coastFeedForCat,discountFeedForCat)+
+                DaysMoneyInShelter(dogNum,feedForOneDog,coastFeedForDog,discountFeedForDog);
 
         System.out.printf("You're need a %.2f$ in a day for cat's feed.%n",
-                DaysMoneyInShelter(catNum,FeedForOneCat,coastFeedForCat,discountFeedForCat));
+                DaysMoneyInShelter(catNum,feedForOneCat,coastFeedForCat,discountFeedForCat));
         System.out.printf("You're need a %.2f$ in a day for dog's feed.%n",
-                DaysMoneyInShelter(dogNum,FeedForOneDog,coastFeedForDog,discountFeedForDog));
+                DaysMoneyInShelter(dogNum,feedForOneDog,coastFeedForDog,discountFeedForDog));
         System.out.printf("You're need %.2f$ in a day for all animals.%n\n",allSumm);
 
         System.out.printf("You're need a %.2f$ in a week for cat's feed.%n",
-                DaysMoneyInShelter(catNum,FeedForOneCat,coastFeedForCat,discountFeedForCat)*7);
+                DaysMoneyInShelter(catNum,feedForOneCat,coastFeedForCat,discountFeedForCat)*forWeek);
         System.out.printf("You're need a %.2f$ in a week for dog's feed.%n",
-                DaysMoneyInShelter(dogNum,FeedForOneDog,coastFeedForDog,discountFeedForDog)*7);
-        System.out.printf("You're need %.2f$ in a week for all animals.%n\n",allSumm*7);
+                DaysMoneyInShelter(dogNum,feedForOneDog,coastFeedForDog,discountFeedForDog)*forWeek);
+        System.out.printf("You're need %.2f$ in a week for all animals.%n\n",allSumm*forWeek);
 
         System.out.printf("You're need a %.2f$ in a month for cat's feed.%n",
-                DaysMoneyInShelter(catNum,FeedForOneCat,coastFeedForCat,discountFeedForCat)*31);
+                DaysMoneyInShelter(catNum,feedForOneCat,coastFeedForCat,discountFeedForCat)*forMonth);
         System.out.printf("You're need a %.2f$ in a month for dog's feed.%n",
-                DaysMoneyInShelter(dogNum,FeedForOneDog,coastFeedForDog,discountFeedForDog)*31);
-        System.out.printf("You're need %.2f$ in a month for all animals.%n\n",allSumm*31);
+                DaysMoneyInShelter(dogNum,feedForOneDog,coastFeedForDog,discountFeedForDog)*forMonth);
+        System.out.printf("You're need %.2f$ in a month for all animals.%n\n",allSumm*forMonth);
 
         System.out.printf("You're need a %.2f$ in a year for cat's feed.%n",
-                DaysMoneyInShelter(catNum,FeedForOneCat,coastFeedForCat,discountFeedForCat)*365);
+                DaysMoneyInShelter(catNum,feedForOneCat,coastFeedForCat,discountFeedForCat)*forYear);
         System.out.printf("You're need a %.2f$ in a year for dog's feed.%n",
-                DaysMoneyInShelter(dogNum,FeedForOneDog,coastFeedForDog,discountFeedForDog)*365);
-        System.out.printf("You're need %.2f$ in a year for all animals.%n\n",allSumm*365);
+                DaysMoneyInShelter(dogNum,feedForOneDog,coastFeedForDog,discountFeedForDog)*forYear);
+        System.out.printf("You're need %.2f$ in a year for all animals.%n\n",allSumm*forYear);
     }
     public static double DaysMoneyInShelter(int AnimalNum, int FeedForOneAnimal, double coastFeedForAnimal, int discount){
         int gramForDay = (FeedForOneAnimal *3);
