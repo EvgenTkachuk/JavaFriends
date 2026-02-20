@@ -9,24 +9,27 @@ public class CarWash {
         int carCount = Integer.parseInt(READER.readLine());
         CarWash(carCount);
     }
-    public static int CarWash(int carCount){
-        for(int i=1;i<=carCount;i++){
-        CarSoup(carCount);
-        CarWashing(carCount);
-        CarDry(carCount);
-        System.out.println("Car № "+ i + " is completely washed.\n");
+
+    public static void CarWash(int carCount) {
+        for (int i = 1; i <= carCount; i++) {
+            CarSoup(carCount);
+            CarWashing(carCount);
+            CarDry(carCount);
+            System.out.println("Car № " + i + " is completely washed.\n");
         }
-        return 0;
     }
-    public  static int CarSoup(int carCount){
+
+    public static int CarSoup(int carCount) {
         System.out.println("This car has been souped...");
         return 0;
     }
-    public static int CarWashing(int carCount){
+
+    public static int CarWashing(int carCount) {
         System.out.println("This car has been washed...");
         return 0;
     }
-    public static int CarDry(int carCount){
+
+    public static int CarDry(int carCount) {
         System.out.println("This car has been dried...");
         return 0;
     }
