@@ -12,23 +12,23 @@ public class Scholarship {
             numbers[i] = Integer.parseInt(reader.readLine());
         }
         int sum = 0;
-        int average = sum / numbers.length;;
+        int average;
         for (int number : numbers) {
             sum += number;
-            average = sum / numbers.length;
         }
+        average = sum / numbers.length;
         Bursary(average);
     }
 
     public static void Bursary(int average) {
         System.out.println("Your grade point average is: " + average);
-        if(average < 8){
+        if (average < 8) {
             System.out.println("Your average score is insufficient to qualify for a scholarship .");
         }
-        else if(average < 10){
+        else if (average < 10) {
             System.out.println("Your average score is sufficient to qualify for a scholarship.");
         }
-        else{
+        else {
             System.out.println("Your average score is excellent for receiving an increased scholarship.");
         }
     }
