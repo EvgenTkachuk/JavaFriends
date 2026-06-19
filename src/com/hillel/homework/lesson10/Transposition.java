@@ -18,7 +18,7 @@ public class Transposition {
 
     }
 
-    private static int[][] input() {
+    public static int[][] input() {
         System.out.println("Введіть кількість елементів висоти масиву: ");
         Scanner scanner = new Scanner(System.in);
         int w = scanner.nextInt();
