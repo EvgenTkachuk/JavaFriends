@@ -1,6 +1,5 @@
 package com.hillel.classwork.lesson11;
 
-import java.sql.SQLOutput;
 
 public class Dog {
     String breed;
