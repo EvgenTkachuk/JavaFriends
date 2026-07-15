@@ -31,6 +31,8 @@ public class ChessGame {
         }
         System.out.println("Added " + chessItems.size() + " chess items");
         drawChessItems(chessItems);
+        Drawable chessBoard = new ChessBoard();
+        chessBoard.draw();
     }
 
     public static ChessItem createChessItem(String input) throws IOException {
@@ -44,6 +46,13 @@ public class ChessGame {
             default:
                 return null;
         }
+    }
+
+    private static void draw(Drawable drawable) {
+        if (drawable instanceof Cloneable) {
+            System.out.println("It`s Cloneable!");
+        }
+        drawable.draw();
     }
 
     private static void drawChessItems(List<ChessItem> chessItems) {

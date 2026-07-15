@@ -2,7 +2,7 @@ package com.hillel.classwork.lesson15;
 
 import java.awt.*;
 
-public abstract class ChessItem {
+public abstract class ChessItem implements Drawable {
     protected int x, y;
     protected int value;
 
